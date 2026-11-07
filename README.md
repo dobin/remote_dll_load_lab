@@ -1,4 +1,4 @@
-# dll_load — remote DLL injection test tool
+# remote_dll_load_lab — remote DLL injection test tool
 
 A minimal, self-contained Windows C test harness that proves a DLL can be
 loaded into **another** process. Three pieces:
@@ -9,6 +9,10 @@ loaded into **another** process. Three pieces:
 | Injector | `injector/injector.c` | `build/injector.exe` | Performs the remote `LoadLibraryA` injection. |
 | Target | `target/target.c` | `build/target.exe` | A harmless process to inject into while testing. |
 | Hardened target | `target_hardened/target_hardened.c` | `build/target_hardened.exe` | Same, but enables DLL-load mitigations so injection is blocked. |
+
+Vibecoded by Deepseek 4.1 Flash. 
+
+Used to test tools & techniques to access `MsMpEng.exe`, which has similar protection. 
 
 ## Build
 
